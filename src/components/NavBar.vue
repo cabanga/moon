@@ -30,9 +30,3 @@
 
   </div>
 </template>
-
-<style scoped>
-  .mg-nav{
-    margin-bottom: 3%;
-  }
-</style>

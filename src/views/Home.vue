@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('/images/jobs-1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -101,7 +101,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section img" style="background-image: url(images/bg_1.jpg); background-position: top center;">
+    <section class="ftco-section img" style="background-image: url(images/jobs-1.jpg); background-position: top center;">
     	<div class="container">
     		<div class="row">
     			<div class="col-md-6">
