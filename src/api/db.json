@@ -1,0 +1,49 @@
+{
+  "vacancies":[
+    {
+      "id": "0",
+      "title": "Programdor web Ruby On Rails",
+      "category": "FullStak",
+      "level": "Pleno",
+      "skills": ["Boostrap", "Jquery", "Ruby Puro", "Rails"],
+      "companyName": "Kianda Stream, Lda",
+      "location": "Maianga, Rua 2",
+      "city": "Luanda",
+      "salary": "300,000.00",
+      "description": "A Moon oferece um cadastro de maneira intuitiva e simples, bem como testes com os quais você pode demonstrar suas habilidades. Em pouco tempo consegui agendar entrevistas e estar inserido no mercado.",
+      "responsibilities": "",
+      "requirements": "",
+      "bonus": ["Transporte", "Alimentação", "Plafom de compras mensal"]
+    },
+    {
+      "id": "1",
+      "title": "Design Grafico",
+      "category": "PartTime",
+      "level": "Senior",
+      "skills": ["Adobe XD CC", "Photoshop", "Illustratit"],
+      "companyName": "DigitalFactory",
+      "location": "Centro de Logistica, Ar 12",
+      "city": "Luanda",
+      "salary": "90,000.00",
+      "description": "A  como testes com os  habilidades. Em pouco tempo consegui agendar entrevistas e estar inserido no mercado.",
+      "responsibilities": "",
+      "requirements": "",
+      "bonus": ["Transporte", "Alimentação"]
+    },
+    {
+      "id": "2",
+      "title": "Product Design",
+      "category": "PartTime",
+      "level": "Senior",
+      "skills": ["Adobe XD", "Photoshop"],
+      "companyName": "MuatSoft",
+      "location": "Camama",
+      "city": "Luanda",
+      "salary": "150,000.00",
+      "description": "A  como agendar entrevistas e estar inserido no mercado.",
+      "responsibilities": "testar a usuabilidade do usuario e controlo",
+      "requirements": "Ser bom em Animações",
+      "bonus": ["Transporte", "Alimentação"]
+    }
+  ]
+}
