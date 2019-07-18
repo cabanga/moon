@@ -20,10 +20,12 @@
 
 						<div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section">
-		          	<span class="subheading">Recently Added Jobs</span>
-		            <h2 class="mb-4">Hot Jobs</h2>
+		          	<span class="subheading">Plataforma 100% Angolana, para recrutamento de programadores</span>
+		            <h2 class="mb-4">Todas as vagas disponíveis</h2>
 		          </div>
 		        </div>
+
+            <hr>
 
 						<div class="row">
 							<div class="col-md-12 ">

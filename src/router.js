@@ -9,16 +9,7 @@ import Home from './views/Home.vue'
 
 import Jobs from './views/Jobs/Jobs.vue'
 import JobsDetails from './views/Jobs/JobsDetails.vue'
-
-
-/*
-
-
-import Vacancies from './components/Vacancy'
-import VacancyShow from './components/Vacancy/Show'
-import VacancyEdit from './components/Vacancy/Edit'
-import VacancyNew from './components/Vacancy/New'
-*/
+import NewJob from './views/Jobs/New-Job.vue'
 
 import NotFountComponent from './views/404'
 
@@ -44,63 +35,16 @@ let router = new Router({
       component: Jobs
     },
     {
-      path: '/job-details',
+      path: '/jobs/job-details',
       name: 'job-details',
       component: JobsDetails,
       //props: true
+    },
+    {
+      path: '/jobs/new',
+      name: 'new-jobs',
+      component: NewJob
     }
-
-
-
-
-
-
-    /*
-    ,
-
-
-    {
-      path: '/vacancies/create',
-      name: 'vacancy-create',
-      component: VacancyNew,
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
-      path: '/vacancies/update/:id',
-      name: 'vacancy-edit',
-      component: VacancyEdit,
-      props: true,
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: Dasboard,
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login,
-      meta: {
-        requiresGuest: true
-      }
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register,
-      meta: {
-        requiresGuest: true
-      }
-    }
-    */
   ]
 })
 

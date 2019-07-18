@@ -15,7 +15,9 @@
 				<li class="nav-item active"><router-link class="nav-link" :to="{name: 'home'}">Moon-IT</router-link></li>
 				<li class="nav-item"><router-link class="nav-link" to="/jobs">Todas Vagas </router-link></li>
 				<li class="nav-item"><a href="contact.html" class="nav-link">Contactos</a></li>
-				<li class="nav-item cta mr-md-1"><a href="new-post.html" class="nav-link">Anunciar Vaga</a></li>
+				
+				<li class="nav-item cta mr-md-1"><router-link class="nav-link" to="/jobs/new">Anunciar Vaga</router-link></li>
+
 				<li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Quero uma Vaga</a></li>
 	        </ul>
 
@@ -23,7 +25,5 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-
-
   </div>
 </template>
