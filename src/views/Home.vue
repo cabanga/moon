@@ -13,6 +13,7 @@
       </div>
     </div>
 
+
     <section class="ftco-section services-section bg-primary">
       <div class="container">
         <div class="row d-flex">
@@ -20,8 +21,8 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-resume"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
+                <h3 class="heading mb-3">Milhões de empregos</h3>
+                <p>Nunca foi tão facil encontrar empregos na área de IT em Angola</p>
               </div>
             </div>
           </div>
@@ -29,8 +30,8 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-collaboration"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Easy To Manage Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
+                <h3 class="heading mb-3">Fácil de gerenciar trabalhos</h3>
+                <p>Plublica e encontra vagas e candidatos facimente.</p>
               </div>
             </div>
           </div>
@@ -38,8 +39,8 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-promotions"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Top Careers</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
+                <h3 class="heading mb-3">Principais carreiras em IT</h3>
+                <p>Todas especialidades na área de IT em um unico espaço.</p>
               </div>
             </div>
           </div>
@@ -47,8 +48,8 @@
             <div class="media block-6 services d-block">
               <div class="icon"><span class="flaticon-employee"></span></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Search Expert Candidates</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
+                <h3 class="heading mb-3">Candidatos direcionados</h3>
+                <p>Buscas simplemente o que voçe precisar sem rodeios.</p>
               </div>
             </div>
           </div>
@@ -60,43 +61,21 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center  ">
-          	<span class="subheading">Job Categories</span>
-            <h2 class="mb-4">Top Categories</h2>
+          	<span class="subheading">Categorias das Vagas</span>
+            <h2 class="mb-4">Príncipais carreiras</h2>
           </div>
         </div>
         <div class="row">
         	<div class="col-md-3  ">
         		<ul class="category">
-        			<li><a href="#">Web Development <br><span class="number">354</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Graphic Designer <br><span class="number">143</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Multimedia <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Advertising <br><span class="number">90</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        	<div class="col-md-3  ">
-        		<ul class="category">
-        			<li><a href="#">Education &amp; Training <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">English <br><span class="number">200</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Social Media <br><span class="number">300</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Writing <br><span class="number">150</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        	<div class="col-md-3  ">
-        		<ul class="category">
-        			<li><a href="#">PHP Programming <br><span class="number">400</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">Software Development <br><span class="number">425</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">Web Designer <br><span class="number">324</span> <span>Open position</span></span><i class="ion-ios-arrow-forward"></i></a></li>
+              <li><a href="#">PHP Programming <br><span class="number">400</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
         			<li><a href="#">Project Management <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Finance Management <br><span class="number">222</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Office &amp; Admin <br><span class="number">123</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
         		</ul>
         	</div>
-        	<div class="col-md-3  ">
-        		<ul class="category">
-        			<li><a href="#">Web Designer <br><span class="number">324</span> <span>Open position</span></span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Customer Service <br><span class="number">564</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Marketing &amp; Sales <br><span class="number">234</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Software Development <br><span class="number">425</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
+
+
         </div>
     	</div>
     </section>
@@ -123,8 +102,8 @@
 					<div class="col-lg-9 pr-lg-5">
 						<div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section  ">
-		          	<span class="subheading">Recently Added Jobs</span>
-		            <h2 class="mb-4">Hot Jobs</h2>
+		          	<span class="subheading">As vagas mais recentes</span>
+		            <h2 class="mb-4">Vagas Recentes</h2>
 		          </div>
 		        </div>
 						<div class="row">
@@ -366,8 +345,8 @@
 		      <div class="col-lg-3 sidebar">
 		        <div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section  ">
-		          	<span class="subheading">Recruitment agencies</span>
-		            <h2 class="mb-4">Top Recruitments</h2>
+		          	<span class="subheading">Empresas que recrutam aqui</span>
+		            <h2 class="mb-4">Top Empresas</h2>
 		          </div>
 		        </div>
 		        <div class="sidebar-box  ">
@@ -406,8 +385,8 @@
      <div class="container">
        <div class="row justify-content-center pb-3">
          <div class="col-md-10 heading-section heading-section-white text-center  ">
-           <span class="subheading">Candidates</span>
-           <h2 class="mb-4">Latest Candidates</h2>
+           <span class="subheading">Candidatos</span>
+           <h2 class="mb-4">Candidatos Mais Recentes</h2>
          </div>
        </div>
      </div>
