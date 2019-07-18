@@ -3,9 +3,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Login from './views/Register/Login.vue'
-import Register from './views/Register/Register.vue'
-import Dasboard from './views/Dasboard.vue'
+//import Login from './views/Register/Login.vue'
+//import Register from './views/Register/Register.vue'
+//import Dasboard from './views/Dasboard.vue'
+
+import Jobs from './views/Jobs/Jobs.vue'
+import JobsDetails from './views/Jobs/JobsDetails.vue'
+
 
 /*
 
@@ -33,21 +37,28 @@ let router = new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/jobs',
+      name: 'jobs',
+      component: Jobs
+    },
+    {
+      path: '/job-details',
+      name: 'job-details',
+      component: JobsDetails,
+      //props: true
     }
+
+
+
+
+
 
     /*
     ,
-    {
-      path: '/vacancies',
-      name: 'vacancies',
-      component: Vacancies
-    },
-    {
-      path: '/vacancies/:id',
-      name: 'vacancy',
-      component: VacancyShow,
-      props: true
-    },
+
+
     {
       path: '/vacancies/create',
       name: 'vacancy-create',
