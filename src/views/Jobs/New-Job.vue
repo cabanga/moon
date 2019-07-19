@@ -16,24 +16,10 @@
     <div class="ftco-section bg-light">
       <div class="container">
         <div class="row">
-       
-          <div class="col-md-12 col-lg-8 mb-5">
-          
-			     <form class="p-5 bg-white" @submit.prevent="createJob">
 
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-price-1">
-                    <input type="checkbox" id="option-price-1"> <span class="text-success">$500</span> For 30 days
-                  </label>
-                </div>
-                
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label for="option-price-2">
-                    <input type="checkbox" id="option-price-2"> <span class="text-success">$300</span> / Monthly Recurring
-                  </label>
-                </div>
-              </div>
+          <div class="col-md-12 col-lg-8 mb-5">
+
+			     <form class="p-5 bg-white" @submit.prevent="createJob">
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -122,7 +108,7 @@
         </div>
       </div>
     </div>
-		
+
 
   </div>
 </template>
@@ -141,7 +127,7 @@
       createJob () {
         postVacancy(this.vacancy)
         .then(response => {
-          this.$router.push('/dashboard')
+          this.$router.push('/dasboard')
         })
         .catch(error => {
           console.log('error to post vacancy : ', error)

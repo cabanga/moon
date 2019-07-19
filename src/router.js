@@ -5,7 +5,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 //import Login from './views/Register/Login.vue'
 //import Register from './views/Register/Register.vue'
-//import Dasboard from './views/Dasboard.vue'
+
+import Dasboard from './views/Dasboard.vue'
 
 import Jobs from './views/Jobs/Jobs.vue'
 import JobsDetails from './views/Jobs/JobsDetails.vue'
@@ -30,18 +31,23 @@ let router = new Router({
       component: Home
     },
     {
+      path: '/',
+      name: 'dashboard',
+      component: Dasboard
+    },
+    {
       path: '/jobs',
       name: 'jobs',
       component: Jobs
     },
     {
-      path: '/jobs/job-details',
+      path: '/job-details/:id',
       name: 'job-details',
       component: JobsDetails,
-      //props: true
+      props: true
     },
     {
-      path: '/jobs/new',
+      path: '/new-job',
       name: 'new-jobs',
       component: NewJob
     }
