@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-//import Login from './views/Register/Login.vue'
-//import Register from './views/Register/Register.vue'
+import Login from './views/Register/Login.vue'
+import Register from './views/Register/Register.vue'
 
 import Dasboard from './views/Dasboard.vue'
 
@@ -50,6 +50,16 @@ let router = new Router({
       path: '/new-job',
       name: 'new-jobs',
       component: NewJob
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     }
   ]
 })

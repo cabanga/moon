@@ -37,32 +37,35 @@
 
               <div class="row form-group">
                 <div class="col-md-12"><h3>Tipo de Vaga</h3></div>
+
+
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-1">
-                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-1" name="job-type"> Full Time
+                    <input type="radio" id="option-job-type-1" name="job-type" value="Full Time"> Full Time
                   </label>
                 </div>
+
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-2">
-                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-2" name="job-type"> Part Time
+                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-2" name="job-type" value="Part Time"> Part Time
                   </label>
                 </div>
 
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-3">
-                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-3" name="job-type"> Freelance
+                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-3" name="job-type" value="Freelance"> Freelance
                   </label>
                 </div>
 
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-4">
-                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-4" name="job-type"> Internship
+                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-4" name="job-type" value="Internship"> Internship
                   </label>
                 </div>
 
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-4">
-                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-4" name="job-type"> Temporário
+                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-4" name="job-type" value="Temporário"> Temporário
                   </label>
                 </div>
 
@@ -81,7 +84,6 @@
                   <textarea v-model="vacancy.description" name="" class="form-control" id="" cols="30" rows="5"></textarea>
                 </div>
               </div>
-
 
               <div class="row form-group">
                 <div class="col-md-12">
