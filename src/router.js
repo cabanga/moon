@@ -31,7 +31,7 @@ let router = new Router({
       component: Home
     },
     {
-      path: '/',
+      path: '/dashboard',
       name: 'dashboard',
       component: Dasboard
     },
@@ -41,7 +41,7 @@ let router = new Router({
       component: Jobs
     },
     {
-      path: '/job-details/:id',
+      path: '/:id',
       name: 'job-details',
       component: JobsDetails,
       props: true

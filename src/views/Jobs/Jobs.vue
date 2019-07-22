@@ -20,7 +20,7 @@
 
 						<div class="row justify-content-center pb-3">
 		          <div class="col-md-12 heading-section">
-		          	<span class="subheading">Plataforma 100% Angolana, para recrutamento de programadores</span>
+		          	<span class="subheading">Plataforma 100% Angolana, para recrutamento na area de I.T</span>
 		            <h2 class="mb-4">Todas as vagas disponíveis</h2>
 		          </div>
 		        </div>
@@ -115,7 +115,7 @@
   import {getVacancies} from '@/api'
 
   export default {
-    name: 'home',
+    name: 'jobs',
     data () {
       return {
         vacanciesList: []
@@ -136,3 +136,14 @@
 
   }
 </script>
+
+<style scoped>
+  .hero-wrap.hero-wrap-2 {
+    height: 270px !important;
+  }
+
+  .ftco-section {
+      padding: 30px 0;
+      position: relative;
+  }
+</style>

@@ -16,7 +16,7 @@ export function jobColor (jobType) {
     return 'bg-info text-white badge py-2 px-3'
   } else if (jobType == 'Internship') {
     return 'bg-secondary text-white badge py-2 px-3'
-  } else if (jobType == 'Temporario') {
+  } else if (jobType == 'Part Time') {
     return 'bg-danger text-white badge py-2 px-3'
   } else  {
     return 'bg-primary text-white badge py-2 px-3'

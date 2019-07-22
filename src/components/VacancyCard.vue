@@ -3,7 +3,11 @@
     <div class="job-post-item py-4 d-block d-lg-flex align-items-center">
       <div class="one-third mb-4 mb-md-0">
         <div class="job-post-item-header d-flex align-items-center">
-          <h2 class="mr-3 text-black"><a href="#">{{vacancy.title}}</a></h2>
+          <h2 class="mr-3 text-black">
+            <router-link :to="{name: 'job-details', params: {id: vacancy.id}}">
+              {{ vacancy.title }}
+            </router-link>
+          </h2>
           <div class="badge-wrap">
            <span v-bind:class="color">{{vacancy.jobType}}</span>
           </div>
@@ -15,11 +19,6 @@
       </div>
 
       <div class="one-forth ml-auto d-flex align-items-center">
-        <div>
-          <a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2">
-            <span class="icon-heart"></span>
-          </a>
-        </div>
         <a href="/" class="btn btn-primary py-2">Aplicar</a>
       </div>
     </div>

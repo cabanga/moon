@@ -53,3 +53,31 @@ export function getVacancies () {
     })
   })
 }
+
+// ============================== GET 3 LASTS VACANCIES =============================
+export function getLastVacancies () {
+  return new Promise((resolve, reject) => {
+    apiClient.get('/vacancies_lasts')
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancies')
+      reject(error.message)
+    })
+  })
+}
+
+// ============================== GET VACANCY =============================
+export function getVacancy (id) {
+  return new Promise((resolve, reject) => {
+    apiClient.get('/vacancies/' + id)
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancy')
+      reject(error.message)
+    })
+  })
+}
