@@ -1,20 +1,16 @@
 <template>
   <div class="">
 
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('/images/jobs-1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-start">
-          <div class="col-md-8   text-center text-md-left mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Todas as vagas da área IT </a></span></p>
-            <h1 class="mb-3 bread">Publicar nova vaga</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="ftco-section bg-light">
       <div class="container">
+        <div class="row">
+          <div class="col">
+            <br>
+
+            <h1 class="mb-3 bread">Publicar vaga</h1>
+
+          </div>
+        </div>
         <div class="row">
 
           <div class="col-md-12 col-lg-8 mb-5">
@@ -31,17 +27,16 @@
               <div class="row form-group mb-5">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="company">Instituição Empresárial</label>
-                  <input v-model="vacancy.company" type="text" id="company" class="form-control" placeholder="ex. Moon LDA, Inc.">
+                  <input v-model="vacancy.companyName" type="text" id="company" class="form-control" placeholder="ex. Moon LDA, Inc.">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12"><h3>Tipo de Vaga</h3></div>
 
-
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label for="option-job-type-1">
-                    <input type="radio" id="option-job-type-1" name="job-type" value="Full Time"> Full Time
+                    <input v-model="vacancy.jobType" type="radio" id="option-job-type-1" name="job-type" value="Full Time"> Full Time
                   </label>
                 </div>
 
@@ -89,6 +84,7 @@
                 <div class="col-md-12">
                   <input type="submit" value="Publicar Nova Vaga" class="btn btn-primary  py-2 px-5">
                   <router-link class="btn btn-secondary  py-2 px-5" :to="{name: 'dashboard'}">Cancelar</router-link>
+
                 </div>
               </div>
 
