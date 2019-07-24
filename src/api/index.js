@@ -81,3 +81,71 @@ export function getVacancy (id) {
     })
   })
 }
+
+
+// =======================================================================================
+export function signUp(creandials) {
+  return new Promise((resolve, reject) => {
+
+    firebase.auth().createUserWithEmailAndPassword(creandials.email, creandials.password)
+    .then(res => {
+      this.$store.commit('setCurrentUser', firebase.auth().currentUser);
+      store.commit('setCurrentUser', firebase.auth().currentUser);
+      resolve(res.user);
+    })
+    .catch( error => {
+      reject(error.message);
+    });
+  })
+}
+
+// ================================== LOGIN =================================
+export function signIn (creandials) {
+  return new Promise((resolve, reject) => {
+    firebase.auth().signInWithEmailAndPassword(creandials.email, creandials.password)
+    .then(res => {
+      firebase.auth().currentUser.getIdToken()
+      .then(currentToken => {
+        setCurrentUser (res.user)
+        setToken(currentToken)
+        resolve(currentToken)
+      })
+      // store.commit('setCurrentUser', firebase.auth().currentUser);
+    })
+    .catch(error => {
+      reject(error.message)
+    })
+  })
+}
+
+// ============================= FACEBOOK PROVIDER ===========================
+export function facebookAutProvider () {
+  return new Promise((resolve, reject) => {
+    var provider = new firebase.auth.FacebookAuthProvider()
+    firebase.auth().signInWithPopup(provider)
+    .then(res => {
+      var token = res.credential.accessToken
+      setCurrentUser (res.user)
+      setToken(token)
+      resolve(token)
+    }).catch(error => {
+      reject(error.message)
+    })
+  })
+}
+
+// ============================= DESTROY SESSION ===========================
+export function signOut () {
+  return new Promise((resolve, reject) => {
+    firebase.auth().signOut()
+    .then(() => {
+      localStorage.removeItem('currentToken')
+      localStorage.removeItem('currentUser')
+      localStorage.removeItem('currentUserId')
+      console.log('User successfull sigout !!!')
+      resolve(true)
+    }).catch(error => {
+      reject(error.message)
+    })
+  })
+}

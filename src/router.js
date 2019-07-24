@@ -33,7 +33,10 @@ let router = new Router({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: Dasboard
+      component: Dasboard,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/jobs',
@@ -41,7 +44,7 @@ let router = new Router({
       component: Jobs
     },
     {
-      path: '/:id',
+      path: '/jobs/:id',
       name: 'job-details',
       component: JobsDetails,
       props: true
@@ -49,17 +52,26 @@ let router = new Router({
     {
       path: '/new-job',
       name: 'new-jobs',
-      component: NewJob
+      component: NewJob,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
+      meta: {
+        requiresGuest: true
+      }
     },
     {
       path: '/register',
       name: 'register',
-      component: Register
+      component: Register,
+      meta: {
+        requiresGuest: true
+      }
     }
   ]
 })

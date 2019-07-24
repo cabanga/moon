@@ -3,20 +3,23 @@
     <div class="hero-wrap hero-wrap-2" style="background-image: url('/images/jobs-1.jpg');" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row d-flex justify-content-center">
-          <div class="col-lg-4 col-sm-12 box-color bg-white d-flex justify-content-center">
+          <div class="col-lg-4 col-sm-12 box-color bg-white">
             <div class="box-login ">
-              <h1>fazer login</h1>
+              <h1 class="text-center">fazer login</h1>
               <form @submit.prevent="login">
 
                 <label class="font-weight-bold" for="email">Email</label>
-                <input v-model="user.email" type="email" id="email" class="form-control" placeholder="Endereço email" required="">
+                <input v-model="email" type="email" id="email" class="form-control" placeholder="Endereço email" required="">
 
-                <label class="font-weight-bold" for="email">Password</label>
-                <input v-model="user.email" type="email" id="email" class="form-control" placeholder="Endereço email" required="">
+                <label class="font-weight-bold" for="password">Password</label>
+                <input v-model="password" type="password" id="password" class="form-control" placeholder="password" required="">
 
                 <br>
 
-                <input type="submit" value="Iniciar Sessão" class="btn btn-primary  py-2 px-5">
+                <input type="submit" value="Iniciar Sessão" class="btn btn-secondary btn-block">
+
+                <h5 class="text-center font-weight-normal">Ou</h5>
+                <button v-on:click="authFacebook" class="btn btn-block btn-sm btn-facebook">Iniciar Sessão Com Facebook</button>
 
                </form>
             </div>
@@ -30,28 +33,44 @@
 
 
 <script>
-  import { postVacancy } from '@/api'
+  import { signIn, facebookAutProvider } from '@/api'
+  // import store from '@/services/store';
 
   export default {
-    name: 'login',
+    name: 'Login',
     data () {
       return {
-        user: {}
+        email: '',
+        password: '',
+        error: ''
       }
     },
+
     methods: {
-      createJob () {
-        postVacancy(this.vacancy)
-        .then(response => {
-          this.$router.push('/dasboard')
+      login() {
+        const creandials = {email: this.email, password: this.password}
+        signIn(creandials)
+        .then( currentToken =>{
+          this.$router.go('/dasboard')
+        })
+        .catch(error =>{
+          this.error = error
+        })
+      },
+
+      authFacebook () {
+        facebookAutProvider ()
+        .then(res => {
+          this.$router.go('/dashboard')
         })
         .catch(error => {
-          console.log('error to post vacancy : ', error)
+          this.error = error
         })
       }
     }
   }
 </script>
+
 
 
 <style scoped>
@@ -64,7 +83,7 @@
   }
 
   .box-color{
-    margin-top: 15%;
+    margin-top: 13%;
   }
 
   .box-login{

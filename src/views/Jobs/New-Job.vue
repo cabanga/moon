@@ -99,7 +99,7 @@
               <p class="mb-0 font-weight-bold">Telemóvel</p>
               <p class="mb-4"><a href="#">+244 913 747 220</a></p>
               <p class="mb-0 font-weight-bold">Endereço Email</p>
-              <p class="mb-0"><a href="#"><span class="__cf_email__">suport@moon.ao</span></a></p>
+              <p class="mb-0"><a href="#"><span class="__cf_email__">geral@moon.ao</span></a></p>
             </div>
           </div>
 
