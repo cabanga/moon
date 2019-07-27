@@ -3,11 +3,14 @@ import firebase from 'firebase/app'
 require('firebase/auth')
 import { setToken, setCurrentUser } from '../api/session'
 
-const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
-//const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
+// const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
+
+const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
 
 const apiClient = Axios.create({
-  baseURL: 'http://localhost:3000/api/v1',
+  //baseURL: 'http://localhost:3000/api/v1',
+  baseURL: 'https://moon--api.herokuapp.com/api/v1',
+
   withCredentials: false,
   headers: {
     Accept: 'application/json',
