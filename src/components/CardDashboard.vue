@@ -70,6 +70,6 @@
 
 <style scoped>
   .vacancy-closed{
-    background-color: #f1b174;
+    background-color: #ffdcdc;
   }
 </style>

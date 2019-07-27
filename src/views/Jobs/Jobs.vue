@@ -60,23 +60,6 @@
 
 
 
-
-		        <div class="row mt-5">
-		          <div class="col text-center">
-		            <div class="block-27">
-		              <ul>
-		                <li><a href="#">&lt;</a></li>
-		                <li class="active"><span>1</span></li>
-		                <li><a href="#">2</a></li>
-		                <li><a href="#">3</a></li>
-		                <li><a href="#">4</a></li>
-		                <li><a href="#">5</a></li>
-		                <li><a href="#">&gt;</a></li>
-		              </ul>
-		            </div>
-		          </div>
-		        </div>
-
 		      </div>
 				</div>
 			</div>
@@ -89,14 +72,14 @@
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <h2>Subscreve para Newsletter</h2>
+              <p>Suscreve na nossa plataforma para estar dentro de todas as vagas na área de I.T. Sem esquecer das grandes empresas que estão sempre a recrutar</p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">
                     <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
+                      <input type="text" class="form-control" placeholder="Seu e-mail">
+                      <input type="submit" value="Subscrever" class="submit px-3">
                     </div>
                   </form>
                 </div>

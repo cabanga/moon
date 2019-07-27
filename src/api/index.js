@@ -15,6 +15,25 @@ const apiClient = Axios.create({
   }
 })
 
+
+// ============================== CLOSE VACANCY =============================
+export function closeVacancy (id) {
+  return new Promise((resolve, reject) => {
+    Axios({
+      method:'PATCH',
+      url: `${BASE_URL}/vacancies/close_vacancy/${id}`
+    })
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancy')
+      reject(error)
+    })
+  })
+}
+
+
 // ============================== PATCH VACANCY =============================
 export function patchVacancy (vacancy, id) {
   return new Promise((resolve, reject) => {

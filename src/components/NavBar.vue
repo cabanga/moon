@@ -13,14 +13,14 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><router-link class="nav-link" :to="{name: 'home'}">Moon-IT</router-link></li>
+            <li v-if="existToken" class="nav-item active"><router-link class="nav-link" :to="{name: 'dashboard'}">Dashboard</router-link></li>
             <li class="nav-item"><router-link class="nav-link" to="/jobs">Todas Vagas </router-link></li>
             <li class="nav-item"><a href="#" class="nav-link">Contactos</a></li>
             <li class="nav-item cta mr-md-1"><router-link class="nav-link" :to="{name: 'new-jobs'}">Anunciar Vaga</router-link></li>
-            <li class="nav-item cta cta-colored"><router-link class="nav-link" :to="{name: 'login'}">Fazer Login</router-link></li>
+            <li v-if="existToken" class="nav-item"><button v-on:click="logOut" class="nav-link btn">Sair</button></li>
 
-            <li class="nav-item">
-              <button v-on:click="logOut" class="nav-link">Sair</button>
-            </li>
+            <li v-else class="nav-item cta cta-colored"><router-link class="nav-link" :to="{name: 'login'}">Fazer Login</router-link></li>
+
 
           </ul>
 
@@ -40,8 +40,16 @@
       logOut() {
         signOut()
         .then(() => {
-          this.$router.push('/')
+          this.$router.go('/')
         })
+      }
+    },
+    computed: {
+      existToken: function () {
+        if (localStorage.getItem('currentToken')) {
+          return true
+        }
+        return false
       }
     }
   }

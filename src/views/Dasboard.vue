@@ -1,8 +1,8 @@
 <template>
   <div style="margin: 100px 0">
     <div class="container">
-      <h1>My vacancies</h1>
-
+      <h1>Minhas Vagas</h1>
+      <hr>
       <br>
       <div class="row no-padding">
         <VacancyCard v-for="vac in myVacancies" :vacancy="vac" :key="vac.id" />

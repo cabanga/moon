@@ -7,6 +7,7 @@ import firebase from 'firebase/app'
 import config from '@/services/firebase'
 
 import i18n from '@/i18n'
+import '@/assets/css/application.css'
 
 
 firebase.initializeApp(config)
