@@ -34,7 +34,6 @@
 
 <script>
   import { signIn, facebookAutProvider } from '@/api'
-  // import store from '@/services/store';
 
   export default {
     name: 'Login',
@@ -51,7 +50,7 @@
         const creandials = {email: this.email, password: this.password}
         signIn(creandials)
         .then( currentToken =>{
-          this.$router.go('/dasboard')
+          this.$router.go('/dashboard')
         })
         .catch(error =>{
           this.error = error

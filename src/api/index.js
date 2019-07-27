@@ -15,6 +15,24 @@ const apiClient = Axios.create({
   }
 })
 
+
+// ============================== GET MY VACANCIES =============================
+export function getMyVacancies () {
+  var myId = localStorage.getItem('currentUserId')
+
+  return new Promise((resolve, reject) => {
+    apiClient.get('/vacancies_uid/'+myId)
+    .then(response => {
+      console.log( response.data );
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancies')
+      reject(error.message)
+    })
+  })
+}
+
 // ============================== POST VACANCY =============================
 export function postVacancy (vacancy) {
   return new Promise((resolve, reject) => {
@@ -28,7 +46,7 @@ export function postVacancy (vacancy) {
       salary: vacancy.salary,
       user_id: vacancy.user_id,
       status: vacancy.status,
-      user_id: "ib05LTlaFYQcJ70IcTPf3aGUPfl1" //localStorage.getItem('currentUserId')
+      user_id: localStorage.getItem('currentUserId')
     })
     .then(response => {
       resolve(response.data)

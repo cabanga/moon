@@ -31,6 +31,13 @@
                 </div>
               </div>
 
+              <div class="row form-group mb-5">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="company">Salário</label>
+                  <input v-model="vacancy.salary" type="text" id="company" class="form-control" placeholder="ex: 300000">
+                </div>
+              </div>
+
               <div class="row form-group">
                 <div class="col-md-12"><h3>Tipo de Vaga</h3></div>
 
@@ -70,6 +77,13 @@
                 <div class="col-md-12"><h3>Localização</h3></div>
                 <div class="col-md-12 mb-3 mb-md-0">
                   <input v-model="vacancy.location" type="text" class="form-control" placeholder="Samba, rua 2">
+                </div>
+              </div>
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Cidade</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input v-model="vacancy.city" type="text" class="form-control" placeholder="ex: Luanda, Benguela">
                 </div>
               </div>
 
@@ -126,7 +140,7 @@
       createJob () {
         postVacancy(this.vacancy)
         .then(response => {
-          this.$router.push('/dasboard')
+          this.$router.go('/dashboard')
         })
         .catch(error => {
           console.log('error to post vacancy : ', error)

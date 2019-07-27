@@ -13,7 +13,6 @@
       </div>
     </div>
 
-
     <section class="ftco-section services-section bg-primary">
       <div class="container">
         <div class="row d-flex">
@@ -58,43 +57,48 @@
     </section>
 
     <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center  ">
-          	<span class="subheading">Categorias das Vagas</span>
-            <h2 class="mb-4">Príncipais carreiras</h2>
+      	<div class="container">
+
+      		<div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center  ">
+            	<span class="subheading">Categorias das Vagas</span>
+              <h2 class="mb-4">Príncipais carreiras</h2>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-        	<div class="col-md-3">
-        		<ul class="category">
-        			<li><a href="#">Web Development <br><span class="number">354</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Graphic Designer <br><span class="number">143</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        	<div class="col-md-3">
-        		<ul class="category">
-        			<li><a href="#">Education &amp; Training <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Social Media <br><span class="number">300</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        	<div class="col-md-3">
-        		<ul class="category">
-        			<li><a href="#">Project Management <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-              <li><a href="#">Software Development <br><span class="number">425</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        	<div class="col-md-3">
-        		<ul class="category">
-        			<li><a href="#">Web Designer <br><span class="number">324</span> <span>Open position</span></span><i class="ion-ios-arrow-forward"></i></a></li>
-        			<li><a href="#">Marketing &amp; Sales <br><span class="number">234</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
-        		</ul>
-        	</div>
-        </div>
-    	</div>
-    </section>
+          <div class="row">
 
+          	<div class="col-md-3">
+          		<ul class="category">
+          			<li><a href="#">Web Development <br><span class="number">354</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          			<li><a href="#">Graphic Designer <br><span class="number">143</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          		</ul>
+          	</div>
+
+          	<div class="col-md-3">
+          		<ul class="category">
+          			<li><a href="#">Education &amp; Training <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          			<li><a href="#">Social Media <br><span class="number">300</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          		</ul>
+          	</div>
+
+          	<div class="col-md-3">
+          		<ul class="category">
+          			<li><a href="#">Project Management <br><span class="number">100</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+                <li><a href="#">Software Development <br><span class="number">425</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          		</ul>
+          	</div>
+
+          	<div class="col-md-3">
+          		<ul class="category">
+          			<li><a href="#">Web Designer <br><span class="number">324</span> <span>Open position</span></span><i class="ion-ios-arrow-forward"></i></a></li>
+          			<li><a href="#">Marketing &amp; Sales <br><span class="number">234</span> <span>Open position</span><i class="ion-ios-arrow-forward"></i></a></li>
+          		</ul>
+          	</div>
+          </div>
+
+      	</div>
+      </section>
 
     <section class="ftco-section img" style="background-image: url(images/jobs-1.jpg); background-position: top center;">
     	<div class="container">
@@ -113,92 +117,93 @@
     	</div>
     </section>
 
+  	<section class="ftco-section bg-light">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-9 pr-lg-5">
+  					<div class="row justify-content-center pb-3">
+      				<div class="col-md-12 heading-section  ">
+      				<span class="subheading">As vagas mais recentes</span>
+      				<h2 class="mb-4">Vagas Recentes</h2>
+      				</div>
+      			</div>
 
-	<section class="ftco-section bg-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 pr-lg-5">
-					<div class="row justify-content-center pb-3">
-    				<div class="col-md-12 heading-section  ">
-    				<span class="subheading">As vagas mais recentes</span>
-    				<h2 class="mb-4">Vagas Recentes</h2>
-    				</div>
-    			</div>
+      			<div class="row">
 
-    			<div class="row">
+              <VacancyCard v-for="vac in vacanciesList" :vacancy="vac" :key="vac.id">
+              </VacancyCard>
 
-            <VacancyCard v-for="vac in vacanciesList" :vacancy="vac" :key="vac.id">
-            </VacancyCard>
+      			</div>
 
-    			</div>
+  			</div>
 
-			</div>
+  			<div class="col-lg-3 sidebar">
+  			<div class="row justify-content-center pb-3">
+  				<div class="col-md-12 heading-section  ">
+  				<span class="subheading">Empresas que recrutam aqui</span>
+  				<h2 class="mb-4">Top Empresas</h2>
+  				</div>
+  			</div>
+  			<div class="sidebar-box  ">
+  				<div class="border">
+  					<a href="#" class="company-wrap"><img src="images/company-1.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+  					<div class="text p-3">
+  						<h3><a href="#">Google Company</a></h3>
+  						<p><span class="number">500</span> <span>Open position</span></p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="sidebar-box  ">
+  				<div class="border">
+  					<a href="#" class="company-wrap"><img src="images/company-2.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+  					<div class="text p-3">
+  						<h3><a href="#">Facebook Company</a></h3>
+  						<p><span class="number">700</span> <span>Open position</span></p>
+  					</div>
+  				</div>
+  			</div>
 
-			<div class="col-lg-3 sidebar">
-			<div class="row justify-content-center pb-3">
-				<div class="col-md-12 heading-section  ">
-				<span class="subheading">Empresas que recrutam aqui</span>
-				<h2 class="mb-4">Top Empresas</h2>
-				</div>
-			</div>
-			<div class="sidebar-box  ">
-				<div class="border">
-					<a href="#" class="company-wrap"><img src="images/company-1.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
-					<div class="text p-3">
-						<h3><a href="#">Google Company</a></h3>
-						<p><span class="number">500</span> <span>Open position</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="sidebar-box  ">
-				<div class="border">
-					<a href="#" class="company-wrap"><img src="images/company-2.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
-					<div class="text p-3">
-						<h3><a href="#">Facebook Company</a></h3>
-						<p><span class="number">700</span> <span>Open position</span></p>
-					</div>
-				</div>
-			</div>
-
-			</div>
-			</div>
-		</div>
-	</section>
+  			</div>
+  			</div>
+  		</div>
+  	</section>
 
     <section class="ftco-section ftco-candidates bg-primary">
-		<div class="container">
-		<div class="row justify-content-center pb-3">
-			<div class="col-md-10 heading-section heading-section-white text-center  ">
-			<span class="subheading">Candidatos</span>
-			<h2 class="mb-4">Candidatos Mais Recentes</h2>
-			</div>
-		</div>
-		</div>
-		<div class="container">
 
-       <div class="row justify-content-md-center">
+      <div class="container">
+    		<div class="row justify-content-center pb-3">
+    			<div class="col-md-10 heading-section heading-section-white text-center  ">
+      			<span class="subheading">Candidatos</span>
+      			<h2 class="mb-4">Candidatos Mais Recentes</h2>
+    			</div>
+    		</div>
+  		</div>
 
-         <div class="col col-sm-3">
-           <div class="item">
-             <a href="#" class="team text-center">
-               <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-               <h2>Nicole Simon</h2>
-               <span class="position">Western City, UK</span>
-             </a>
-           </div>
+      <div class="container">
+
+     <div class="row justify-content-md-center">
+
+       <div class="col col-sm-3">
+         <div class="item">
+           <a href="#" class="team text-center">
+             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
+             <h2>Nicole Simon</h2>
+             <span class="position">Western City, UK</span>
+           </a>
          </div>
+       </div>
 
-         <div class="col col-sm-3">
-           <div class="item">
-             <a href="#" class="team text-center">
-               <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-               <h2>Nicole Simon</h2>
-               <span class="position">Western City, UK</span>
-             </a>
-           </div>
+       <div class="col col-sm-3">
+         <div class="item">
+           <a href="#" class="team text-center">
+             <div class="img" style="background-image: url(images/person_2.jpg);"></div>
+             <h2>Nicole Simon</h2>
+             <span class="position">Western City, UK</span>
+           </a>
          </div>
+       </div>
 
-         <div class="col col-sm-3">
+        <div class="col col-sm-3">
           <div class="item">
             <a href="#" class="team text-center">
               <div class="img" style="background-image: url(images/person_3.jpg);"></div>
@@ -208,9 +213,10 @@
           </div>
         </div>
 
-       </div>
-
      </div>
+
+    </div>
+
     </section>
 
   </div>
