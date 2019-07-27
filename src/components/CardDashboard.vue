@@ -17,11 +17,11 @@
             Encerrar
           </button>
 
-          <router-link v-if="!isClose" class="btn btn-sm btn-update" :to="{name: 'vacancy-edit', params: {id: vacancy.id}}">
+          <router-link v-if="!isClose" class="btn btn-sm btn-update" :to="{name: 'edit-jobs', params: {id: vacancy.id}}">
             Editar
           </router-link>
 
-          <router-link class="btn btnSubmit-login btn-sm" :to="{name: 'vacancy', params: {id: vacancy.id}}">
+          <router-link class="btn btnSubmit-login btn-sm" :to="{name: 'job-details', params: {id: vacancy.id}}">
             Ver detalhes
           </router-link>
 

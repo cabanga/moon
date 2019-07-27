@@ -3,7 +3,7 @@ import firebase from 'firebase/app'
 require('firebase/auth')
 import { setToken, setCurrentUser } from '../api/session'
 
-// const BASE_URL = process.env.API_URL || 'http://localhost:3000'
+const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
 //const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
 
 const apiClient = Axios.create({
@@ -15,6 +15,35 @@ const apiClient = Axios.create({
   }
 })
 
+// ============================== PATCH VACANCY =============================
+export function patchVacancy (vacancy, id) {
+  return new Promise((resolve, reject) => {
+    var data = {
+      title: vacancy.title,
+      companyName: vacancy.companyName,
+      jobType: vacancy.jobType,
+      location: vacancy.location,
+      description: vacancy.description,
+      city: vacancy.city,
+      salary: vacancy.salary,
+      user_id: vacancy.user_id,
+      status: vacancy.status,
+      user_id: localStorage.getItem('currentUserId')
+    }
+    Axios({
+      method:'PATCH',
+      url: `${BASE_URL}/vacancies/${id}`,
+      data: data
+    })
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to patch vacancy')
+      reject(error)
+    })
+  })
+}
 
 // ============================== GET MY VACANCIES =============================
 export function getMyVacancies () {
@@ -23,7 +52,6 @@ export function getMyVacancies () {
   return new Promise((resolve, reject) => {
     apiClient.get('/vacancies_uid/'+myId)
     .then(response => {
-      console.log( response.data );
       resolve(response.data)
     })
     .catch(error => {

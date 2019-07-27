@@ -2,7 +2,7 @@
   <div id="app">
     <NavBar />
     <router-view/>
-    <Footer v-if="['home', 'dashboard', 'jobs', 'job-details'].indexOf($route.name) > -1" />
+    <Footer v-if="['home', 'dashboard', 'jobs' ].indexOf($route.name) > -1" />
 
   </div>
 </template>

@@ -11,6 +11,7 @@ import Dasboard from './views/Dasboard.vue'
 import Jobs from './views/Jobs/Jobs.vue'
 import JobsDetails from './views/Jobs/JobsDetails.vue'
 import NewJob from './views/Jobs/New-Job.vue'
+import EditJob from './views/Jobs/Edit-Job.vue'
 
 import NotFountComponent from './views/404'
 
@@ -53,6 +54,15 @@ let router = new Router({
       path: '/new-job',
       name: 'new-jobs',
       component: NewJob,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/jobs/update/:id',
+      name: 'edit-jobs',
+      component: EditJob,
+      props: true,
       meta: {
         requiresAuth: true
       }

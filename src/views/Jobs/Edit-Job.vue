@@ -7,7 +7,7 @@
           <div class="col">
             <br>
 
-            <h1 class="mb-3 bread">Publicar vaga</h1>
+            <h1 class="mb-3 bread">Actualizar vaga</h1>
 
           </div>
         </div>
@@ -15,7 +15,7 @@
 
           <div class="col-md-12 col-lg-8 mb-5">
 
-			     <form class="p-5 bg-white" @submit.prevent="createJob">
+			     <form class="p-5 bg-white" @submit.prevent="updateJob">
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -96,7 +96,7 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Publicar Nova Vaga" class="btn btn-primary  py-2 px-5">
+                  <input type="submit" value="Actualizar Vaga" class="btn btn-primary  py-2 px-5">
                   <router-link class="btn-cancel btn btn-secondary  py-2 px-5" :to="{name: 'dashboard'}">Cancelar</router-link>
 
                 </div>
@@ -127,25 +127,45 @@
 </template>
 
 <script>
-  import { postVacancy } from '@/api'
+  import { getVacancy, patchVacancy } from '@/api'
 
   export default {
-    name: 'new-job',
+    name: 'edit-job',
+    props: ['id'],
+
     data () {
       return {
         vacancy: {}
       }
     },
-    methods: {
-      createJob () {
-        postVacancy(this.vacancy)
-        .then(response => {
-          this.$router.go('/dashboard')
+
+    created () {
+      getVacancy(this.id)
+        .then(vc => {
+          this.vacancy = vc
         })
         .catch(error => {
-          console.log('error to post vacancy : ', error)
+          console.log(error)
         })
+    },
+
+    methods: {
+      updateJob () {
+        patchVacancy(this.vacancy, this.id)
+          .then(response => {
+            this.$router.push('/dashboard')
+          })
+          .catch(error => {
+            console.log('error to post vacancy : ', error)
+          })
       }
     }
+
+
+
+
+
+
+
   }
 </script>
