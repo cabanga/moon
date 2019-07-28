@@ -13,6 +13,8 @@
 </template>
 
 
+
+
 <script>
   import { getMyVacancies } from '@/api'
   import VacancyCard from '@/components/CardDashboard.vue'

@@ -141,6 +141,7 @@
         postVacancy(this.vacancy)
         .then(response => {
           this.$router.go('/dashboard')
+          $.notify("Vaga adicionado com sucesso", "success");
         })
         .catch(error => {
           console.log('error to post vacancy : ', error)

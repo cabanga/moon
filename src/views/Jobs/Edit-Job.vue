@@ -154,6 +154,7 @@
         patchVacancy(this.vacancy, this.id)
           .then(response => {
             this.$router.push('/dashboard')
+            $.notify("Vaga Actualizada com sucesso", "success");
           })
           .catch(error => {
             console.log('error to post vacancy : ', error)

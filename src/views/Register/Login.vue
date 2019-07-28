@@ -62,6 +62,7 @@
         signIn(creandials)
         .then( currentToken =>{
           this.$router.go('/dashboard')
+          $.notify("Login feito com sucesso", "success");
         })
         .catch(error =>{
           this.error = error
@@ -71,6 +72,7 @@
         twitterAutProvider ()
         .then(res => {
           this.$router.go('/dashboard')
+          $.notify("Login feito com sucesso", "success");
         })
         .catch(error => {
           console.log("erro : ", error);

@@ -72,6 +72,7 @@
         twitterAutProvider ()
         .then(res => {
           this.$router.go('/dashboard')
+          $.notify("Registo feito com sucesso", "success");
         })
         .catch(error => {
           console.log("erro : ", error);
@@ -82,6 +83,7 @@
         facebookAutProvider ()
         .then(res => {
           this.$router.go('/dashboard')
+          $.notify("Registo feito com sucesso", "success");
         })
         .catch(error => {
           this.error = error
