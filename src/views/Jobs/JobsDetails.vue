@@ -38,7 +38,8 @@
             <hr>
             <div class="row form-group">
               <div class="col-md-12">
-                <input type="submit" value="Aplicar Agora" class="btn btn-primary  py-2 px-5">
+                <button v-if="!already_applied" class="btn btn-primary  py-2 px-5" v-on:click="apply_candidate(vacancy.id)">Aplicar Agora</button>
+                <button v-else="!already_applied" class="btn btn-success  py-2 px-5">Já aplicaste nesta vaga</button>
                 <router-link class="btn btn-secondary  py-2 px-5" style="margin-left: 15px" :to="{name: 'dashboard'}">Cancelar</router-link>
               </div>
             </div>
@@ -58,14 +59,7 @@
           </div>
 
         </div>
-
-
       </div>
-
-
-
-
-
     </div>
 
   </div>
@@ -73,7 +67,8 @@
 
 
 <script>
-  import { getVacancy } from '@/api'
+  import { getVacancy, applyCandidate, alreadyApplied } from '@/api'
+  // import { getVacancy } from '@/api'
   import { userLogged } from '@/api/session'
 
   import { skillsConvert, currencyFormat } from '@/controllers'
@@ -92,6 +87,18 @@
       .then(vacancy => {
         this.vacancy = vacancy
         this.salary = currencyFormat(this.vacancy.salary)
+      })
+      .catch(error => {
+        console.log(error)
+      }),
+
+      alreadyApplied(this.id)
+      .then(was => {
+        if (userLogged) {
+          this.already_applied = was && true
+        } else {
+          this.already_applied = was && false
+        }
       })
       .catch(error => {
         console.log(error)
@@ -118,6 +125,8 @@
 
 
       }
+
+
     }
   }
 </script>

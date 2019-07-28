@@ -3,13 +3,12 @@ import firebase from 'firebase/app'
 require('firebase/auth')
 import { setToken, setCurrentUser } from '../api/session'
 
-// const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
-
-const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
+const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
+//const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
 
 const apiClient = Axios.create({
-  //baseURL: 'http://localhost:3000/api/v1',
-  baseURL: 'https://moon--api.herokuapp.com/api/v1',
+  baseURL: 'http://localhost:3000/api/v1',
+  //baseURL: 'https://moon--api.herokuapp.com/api/v1',
 
   withCredentials: false,
   headers: {
@@ -71,6 +70,7 @@ export function patchVacancy (vacancy, id) {
 export function getMyVacancies () {
   var myId = localStorage.getItem('currentUserId')
 
+  console.log("my id : ", myId);
   return new Promise((resolve, reject) => {
     apiClient.get('/vacancies_uid/'+myId)
     .then(response => {
@@ -235,6 +235,44 @@ export function signOut () {
       resolve(true)
     }).catch(error => {
       reject(error.message)
+    })
+  })
+}
+
+// ============================== APPLY CANDIDATE =============================
+export function applyCandidate (id) {
+  return new Promise((resolve, reject) => {
+    Axios({
+      method:'POST',
+      url: `${BASE_URL}/candidates`,
+      data: {
+        vacancy_id: id,
+        user_id: localStorage.getItem('currentUserId')
+      }
+    })
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to post candidate')
+      reject(error)
+    })
+  })
+}
+
+// ============================== CLOSE VACANCY =============================
+export function alreadyApplied (id) {
+  return new Promise((resolve, reject) => {
+    Axios({
+      method:'GET',
+      url: `${BASE_URL}/vacancy/${id}/${localStorage.getItem('currentUserId')}`
+    })
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancy')
+      reject(error)
     })
   })
 }
