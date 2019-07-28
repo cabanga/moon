@@ -186,9 +186,9 @@
        <div class="col col-sm-3">
          <div class="item">
            <a href="#" class="team text-center">
-             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-             <h2>Nicole Simon</h2>
-             <span class="position">Western City, UK</span>
+             <div class="img" style="background-image: url(images/avatar/1.png);"></div>
+             <h2>Edvaldo Martins</h2>
+             <span class="position">Mobile Developer</span>
            </a>
          </div>
        </div>
@@ -196,9 +196,9 @@
        <div class="col col-sm-3">
          <div class="item">
            <a href="#" class="team text-center">
-             <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-             <h2>Nicole Simon</h2>
-             <span class="position">Western City, UK</span>
+             <div class="img" style="background-image: url(images/avatar/2.png);"></div>
+             <h2>Adário Muatelembe</h2>
+             <span class="position">FullStack Dev</span>
            </a>
          </div>
        </div>
@@ -206,9 +206,9 @@
         <div class="col col-sm-3">
           <div class="item">
             <a href="#" class="team text-center">
-              <div class="img" style="background-image: url(images/person_3.jpg);"></div>
-              <h2>Nicole Simon</h2>
-              <span class="position">Western City, UK</span>
+              <div class="img" style="background-image: url(images/avatar/3.png);"></div>
+              <h2>Agostinho Bismar</h2>
+              <span class="position">Design de Interface</span>
             </a>
           </div>
         </div>
