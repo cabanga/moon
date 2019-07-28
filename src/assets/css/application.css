@@ -223,6 +223,12 @@ a {
   border-color: #3b5998;
 }
 
+.btn-twitter{
+  color: #fff !important;
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
 .footer-div{
   background: rgba(108, 99, 255, 0.12);
 }

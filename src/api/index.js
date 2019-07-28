@@ -186,10 +186,31 @@ export function signIn (creandials) {
   })
 }
 
+
+// ============================= TWITTER PROVIDER ===========================
+export function twitterAutProvider () {
+  return new Promise((resolve, reject) => {
+    var provider = new firebase.auth.TwitterAuthProvider()
+    firebase.auth().languageCode = 'pt'
+
+    firebase.auth().signInWithPopup(provider)
+    .then(res => {
+      var token = res.credential.accessToken
+      setCurrentUser (res.user)
+      setToken(token)
+      resolve(token)
+    }).catch(error => {
+      reject(error.message)
+    })
+  })
+}
+
 // ============================= FACEBOOK PROVIDER ===========================
 export function facebookAutProvider () {
   return new Promise((resolve, reject) => {
     var provider = new firebase.auth.FacebookAuthProvider()
+    firebase.auth().languageCode = 'pt'
+
     firebase.auth().signInWithPopup(provider)
     .then(res => {
       var token = res.credential.accessToken

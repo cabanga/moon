@@ -17,9 +17,20 @@
                 <br>
 
                 <input type="submit" value="Iniciar Sessão" class="btn btn-secondary btn-block">
+                <br>
 
-                <h5 class="text-center font-weight-normal">Ou</h5>
-                <button v-on:click="authFacebook" class="btn btn-block btn-sm btn-facebook">Iniciar Sessão Com Facebook</button>
+                <div class="row">
+                  <div class="col">
+                    <button v-on:click="authFacebook" class="btn btn-block btn-sm btn-facebook">Com Facebook</button>
+                  </div>
+
+                  <div class="col">
+                    <button v-on:click="authTwitter" class="btn btn-block btn-sm btn-twitter">Com Twitter</button>
+                  </div>
+                </div>
+
+                <br>
+                <router-link style="color: #1da1f2;" class="text-center font-weight-normal" :to="{name: 'register'}">Fazer Registo</router-link>
 
                </form>
             </div>
@@ -36,7 +47,7 @@
   import { signIn, facebookAutProvider } from '@/api'
 
   export default {
-    name: 'Login',
+    name: 'login',
     data () {
       return {
         email: '',
@@ -56,7 +67,16 @@
           this.error = error
         })
       },
-
+      authTwitter () {
+        twitterAutProvider ()
+        .then(res => {
+          this.$router.go('/dashboard')
+        })
+        .catch(error => {
+          console.log("erro : ", error);
+          this.error = error
+        })
+      },
       authFacebook () {
         facebookAutProvider ()
         .then(res => {

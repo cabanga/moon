@@ -16,10 +16,10 @@
             <li v-if="existToken" class="nav-item active"><router-link class="nav-link" :to="{name: 'dashboard'}">Dashboard</router-link></li>
             <li class="nav-item"><router-link class="nav-link" to="/jobs">Todas Vagas </router-link></li>
             <li class="nav-item"><a href="#" class="nav-link">Contactos</a></li>
-            <li class="nav-item cta mr-md-1"><router-link class="nav-link" :to="{name: 'new-jobs'}">Anunciar Vaga</router-link></li>
+            <li class="nav-item cta mr-md-1"><router-link class="nav-link btn-sm" :to="{name: 'new-jobs'}">Anunciar Vaga</router-link></li>
             <li v-if="existToken" class="nav-item"><button v-on:click="logOut" class="nav-link btn">Sair</button></li>
 
-            <li v-else class="nav-item cta cta-colored"><router-link class="nav-link" :to="{name: 'login'}">Fazer Login</router-link></li>
+            <li v-else class="nav-item cta cta-colored"><router-link class="nav-link btn-sm" :to="{name: 'login'}">Fazer Login</router-link></li>
 
 
           </ul>
