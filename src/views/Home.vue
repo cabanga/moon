@@ -146,19 +146,17 @@
   			</div>
   			<div class="sidebar-box  ">
   				<div class="border">
-  					<a href="#" class="company-wrap"><img src="images/company-1.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+  					<a href="#" class="company-wrap"><img src="images/anuncio.png" class="img-fluid" alt="Colorlib Free Template"></a>
   					<div class="text p-3">
-  						<h3><a href="#">Google Company</a></h3>
-  						<p><span class="number">500</span> <span>Open position</span></p>
+  						<p><span class="number">540</span> <span style="margin-left: 15px">Visualizações</span></p>
   					</div>
   				</div>
   			</div>
   			<div class="sidebar-box  ">
   				<div class="border">
-  					<a href="#" class="company-wrap"><img src="images/company-2.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+  					<a href="#" class="company-wrap"><img src="images/anuncio.png" class="img-fluid" alt="Colorlib Free Template"></a>
   					<div class="text p-3">
-  						<h3><a href="#">Facebook Company</a></h3>
-  						<p><span class="number">700</span> <span>Open position</span></p>
+  						<p><span class="number">34</span> <span style="margin-left: 15px">Visualizações</span></p>
   					</div>
   				</div>
   			</div>
