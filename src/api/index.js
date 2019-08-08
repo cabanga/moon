@@ -3,12 +3,12 @@ import firebase from 'firebase/app'
 require('firebase/auth')
 import { setToken, setCurrentUser } from '../api/session'
 
-const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
-//const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
+//const BASE_URL = process.env.API_URL || 'http://localhost:3000/api/v1'
+const BASE_URL = process.env.API_URL || 'https://moon--api.herokuapp.com/api/v1'
 
 const apiClient = Axios.create({
-  baseURL: 'http://localhost:3000/api/v1',
-  //baseURL: 'https://moon--api.herokuapp.com/api/v1',
+  //baseURL: 'http://localhost:3000/api/v1',
+  baseURL: 'https://moon--api.herokuapp.com/api/v1',
 
   withCredentials: false,
   headers: {
@@ -16,6 +16,50 @@ const apiClient = Axios.create({
     'Content-Type': 'application/json'
   }
 })
+
+
+// name: profile.name  ,
+// avatar: profile.avatar ,
+// email: profile.email,
+// cell_phone: profile.cell_phone ,
+// user_id: localStorage.getItem('currentUserId')
+
+// ============================== POST VACANCY =============================
+export function postProfile (user) {
+  console.log("user create profile :", user);
+
+  return new Promise((resolve, reject) => {
+    apiClient.post('/profiles',{
+      email: user.email,
+      user_id: user
+    })
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to post vacancy')
+      reject(error)
+    })
+  })
+}
+
+
+// ============================== GET MY VACANCIES =============================
+export function getMyProfile () {
+  var myId = localStorage.getItem('currentUserId')
+
+  console.log("my id : ", myId);
+  return new Promise((resolve, reject) => {
+    apiClient.get('/profiles/'+myId)
+    .then(response => {
+      resolve(response.data)
+    })
+    .catch(error => {
+      console.log('error to get vacancies')
+      reject(error.message)
+    })
+  })
+}
 
 
 // ============================== CLOSE VACANCY =============================
@@ -34,7 +78,6 @@ export function closeVacancy (id) {
     })
   })
 }
-
 
 // ============================== PATCH VACANCY =============================
 export function patchVacancy (vacancy, id) {
@@ -159,6 +202,8 @@ export function signUp(creandials) {
     .then(res => {
       this.$store.commit('setCurrentUser', firebase.auth().currentUser);
       store.commit('setCurrentUser', firebase.auth().currentUser);
+      // create profile
+      postProfile(res.user)
       resolve(res.user);
     })
     .catch( error => {

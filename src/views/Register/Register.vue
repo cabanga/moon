@@ -59,10 +59,11 @@
     methods: {
       register () {
         const creandials = {email: this.email, password: this.password}
-
+        console.log("chegou aqui : ", creandials);
         signUp(creandials)
         .then( user =>{
-          this.$router.push('/dasboard');
+          console.log("my user : ", user)
+          //this.$router.push('/dasboard');
         })
         .catch( error =>{
           this.error = error

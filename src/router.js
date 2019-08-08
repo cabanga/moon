@@ -7,6 +7,7 @@ import Login from './views/Register/Login.vue'
 import Register from './views/Register/Register.vue'
 
 import Dasboard from './views/Dasboard.vue'
+import Profile from './views/Profile/Index.vue'
 
 import Jobs from './views/Jobs/Jobs.vue'
 import JobsDetails from './views/Jobs/JobsDetails.vue'
@@ -35,6 +36,14 @@ let router = new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dasboard,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
       meta: {
         requiresAuth: true
       }
